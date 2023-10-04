@@ -1,13 +1,13 @@
-const Flow = require('../build/flow')
+const { Flow } = require('../build/flow')
 
 // Setup code
 async function hello() {
-	return 'hello'
+  return 'hello'
 }
 
 // More setup code
 async function world(data) {
-	return `${data}, world!`
+  return `${data}, world!`
 }
 
 (async main => { // Until top-level await becomes a thing.

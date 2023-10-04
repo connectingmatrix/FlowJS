@@ -1,17 +1,7 @@
-// @flow
-'use strict'
-
 import {
   type FlowInterface,
-  type FlowMethodsInterface,
-
-  type FlowDirection,
   type FlowPipe,
-
-  type FlowInitializer,
-  type FlowTarget,
-
-} from './definitions'
+} from '@flow/definitions'
 
 function runFlow() {
   const flow: FlowInterface = this
@@ -32,7 +22,8 @@ function runFlow() {
   }
 
   // For each event source, go ahead and call it to init the events.
-  for (const event: FlowPipe of flow.pipes.events) {
+  const events = flow.pipes.events as Array<FlowPipe>;
+  for (const event of events) {
     callNext.call(flow, -1, event)
   }
 }

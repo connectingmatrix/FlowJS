@@ -1,5 +1,3 @@
-// @flow
-
 export interface FlowInterface {
   pipes: FlowPipes,
 
