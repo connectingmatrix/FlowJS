@@ -1,4 +1,4 @@
-import { type FlowInterface, type FlowPipes, type PipePromise, FlowTarget } from '@flow/definitions';
+import { type FlowInterface, type FlowPipes, type PipePromise, FlowTarget } from './definitions';
 export declare class Flow implements FlowInterface {
     pipes: FlowPipes;
     flowRunning: boolean;
@@ -19,3 +19,5 @@ export declare class Flow implements FlowInterface {
     static use(name: string, module: any): void;
     constructor();
 }
+
+export * from './definitions'

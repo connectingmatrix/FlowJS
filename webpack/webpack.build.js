@@ -13,12 +13,13 @@ const BUNDLE_MODULES = true;
 module.exports = {
     entry: {
         "flow": './lib/index',
+        "index": './src'
     },
     mode: NODE_ENV,
     target: 'node',
     output: {
         libraryTarget: 'umd',
-        path: path.resolve('build'),
+        path: NODE_ENV === 'development' ? path.resolve('dist') : path.resolve('build'),
         filename: '[name].js',
     },
     externals: [

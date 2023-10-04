@@ -7,9 +7,13 @@
     "example": "examples",
     "lib": "lib"
   },
+  "files": [
+    "*"
+  ],
+  "types": "./lib/index.d.ts",
   "scripts": {
     "watch": "webpack --config ./webpack/webpack.watch.js",
-    "build": "webpack --config ./webpack/webpack.build.js"
+    "build": "NODE_ENV=production webpack --config ./webpack/webpack.build.js"
   },
   "keywords": [
     "flow",
